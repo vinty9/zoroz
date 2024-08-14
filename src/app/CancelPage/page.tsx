@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 
@@ -134,4 +134,11 @@ const CancelPage = () => {
   );
 };
 
-export default CancelPage;
+// Wrap the CancelPage component in a Suspense boundary
+const CancelPageWrapper = () => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <CancelPage />
+  </Suspense>
+);
+
+export default CancelPageWrapper;
