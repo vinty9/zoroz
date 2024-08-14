@@ -151,6 +151,7 @@
 
 // export default FaqSection;
 
+"use client";  // This marks the file as a Client Component
 
 import { useState } from 'react';
 
