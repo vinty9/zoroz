@@ -67,7 +67,7 @@
 //     e.preventDefault();
 //     if (isEditing) {
 //       const response = await axios.put(
-//         `http://localhost:8080/address/${newAddress._id}`,
+//         `https://zoroz-ecommerce-backend.onrender.com/address/${newAddress._id}`,
 //         newAddress
 //       );
 //       setAddresses(
@@ -77,7 +77,7 @@
 //       );
 //     } else {
 //       const response = await axios.post(
-//         "http://localhost:8080/address",
+//         "https://zoroz-ecommerce-backend.onrender.com/address",
 //         newAddress
 //       );
 //       setAddresses([...addresses, response.data]);
@@ -438,7 +438,7 @@ const Profile: React.FC = () => {
     e.preventDefault();
     if (isEditing) {
       const response = await axios.put(
-        `http://localhost:8080/address/${newAddress._id}`,
+        `https://zoroz-ecommerce-backend.onrender.com/address/${newAddress._id}`,
         newAddress
       );
       setAddresses(
@@ -448,7 +448,7 @@ const Profile: React.FC = () => {
       );
     } else {
       const response = await axios.post(
-        "http://localhost:8080/address",
+        "https://zoroz-ecommerce-backend.onrender.com/address",
         newAddress
       );
       setAddresses([...addresses, response.data]);

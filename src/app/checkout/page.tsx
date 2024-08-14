@@ -43,7 +43,7 @@
 
 //   const fetchAddresses = async () => {
 //     try {
-//       const response = await axios.get("http://localhost:8080/address");
+//       const response = await axios.get("https://zoroz-ecommerce-backend.onrender.com/address");
 //       setAddresses(response.data);
 //     } catch (error) {
 //       console.error("Error fetching addresses:", error);
@@ -91,7 +91,7 @@
 //     try {
 //       if (editAddressId) {
 //         await axios.put(
-//           `http://localhost:8080/address/${editAddressId}`,
+//           `https://zoroz-ecommerce-backend.onrender.com/address/${editAddressId}`,
 //           newAddress,
 //           {
 //             headers: {
@@ -101,7 +101,7 @@
 //         );
 //         alert("Address updated successfully!");
 //       } else {
-//         await axios.post("http://localhost:8080/address", newAddress, {
+//         await axios.post("https://zoroz-ecommerce-backend.onrender.com/address", newAddress, {
 //           headers: {
 //             "Content-Type": "application/json",
 //           },
@@ -312,7 +312,7 @@ const Checkout = () => {
 
   const fetchAddresses = useCallback(async () => {
     try {
-      const response = await axios.get("http://localhost:8080/address");
+      const response = await axios.get("https://zoroz-ecommerce-backend.onrender.com/address");
       setAddresses(response.data);
     } catch (error) {
       console.error("Error fetching addresses:", error);
@@ -377,7 +377,7 @@ const Checkout = () => {
     try {
       if (editAddressId) {
         await axios.put(
-          `http://localhost:8080/address/${editAddressId}`,
+          `https://zoroz-ecommerce-backend.onrender.com/address/${editAddressId}`,
           newAddress,
           {
             headers: {
@@ -387,7 +387,7 @@ const Checkout = () => {
         );
         alert("Address updated successfully!");
       } else {
-        await axios.post("http://localhost:8080/address", newAddress, {
+        await axios.post("https://zoroz-ecommerce-backend.onrender.com/address", newAddress, {
           headers: {
             "Content-Type": "application/json",
           },
