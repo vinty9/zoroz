@@ -15,7 +15,7 @@ import "./globals.css";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 
-const backendUrl = "https://zoroz-ecommerce-backend.onrender.com";
+const backendUrl = "https://zoroz-backend.onrender.com";
 
 interface Product {
   _id: string;
@@ -73,7 +73,7 @@ const Homepage = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch('https://zoroz-ecommerce-backend.onrender.com/categories/getCategories');
+        const response = await fetch('https://zoroz-backend.onrender.com/categories/getCategories');
         const result = await response.json();
 
         if (Array.isArray(result.data)) {
@@ -92,7 +92,7 @@ const Homepage = () => {
   // useEffect(() => {
   //   const fetchBrands = async () => {
   //     try {
-  //       const response = await axios.get('https://zoroz-ecommerce-backend.onrender.com/categories/getBrands');
+  //       const response = await axios.get('https://zoroz-backend.onrender.com/categories/getBrands');
   //       const fetchedBrands = response.data.data; // Extract the brands array from the data property
   
   //       // Check if fetchedBrands is an array before setting it
@@ -114,7 +114,7 @@ const Homepage = () => {
   useEffect(() => {
     const fetchBrands = async () => {
       try {
-        const response = await fetch('https://zoroz-ecommerce-backend.onrender.com/categories/getBrands'); // Adjust this URL based on your actual API route
+        const response = await fetch('https://zoroz-backend.onrender.com/categories/getBrands'); // Adjust this URL based on your actual API route
         const result = await response.json();
   
         if (result.success) {
@@ -146,7 +146,7 @@ const Homepage = () => {
 
     try {
       const encodedCategoryName = encodeURIComponent(categoryName);
-      const response = await fetch(`https://zoroz-ecommerce-backend.onrender.com/categories/getSubCategories/${encodedCategoryName}`);
+      const response = await fetch(`https://zoroz-backend.onrender.com/categories/getSubCategories/${encodedCategoryName}`);
 
       if (response.ok) {
         const result = await response.json();

@@ -94,7 +94,7 @@ const ProductPage = () => {
   useEffect(() => {
     if (product) {
       axios
-        .get(`https://zoroz-ecommerce-backend.onrender.com/api/reviews?productId=${product._id}`)
+        .get(`https://zoroz-backend.onrender.com/api/reviews?productId=${product._id}`)
         .then((response) => {
           setReviews(response.data);
         });
@@ -109,7 +109,7 @@ const ProductPage = () => {
     e.preventDefault();
     if (product) {
       try {
-        const response = await axios.post(`https://zoroz-ecommerce-backend.onrender.com/api/reviews`, {
+        const response = await axios.post(`https://zoroz-backend.onrender.com/api/reviews`, {
           ...newReview,
           productId: product._id,
         });

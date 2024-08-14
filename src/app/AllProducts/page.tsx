@@ -7,7 +7,7 @@ import { FaStar, FaCartPlus, FaHeart } from "react-icons/fa";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 
-const backendUrl = "https://zoroz-ecommerce-backend.onrender.com";
+const backendUrl = "https://zoroz-backend.onrender.com";
 
 interface Product {
   _id?: number;

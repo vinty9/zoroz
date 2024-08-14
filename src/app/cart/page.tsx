@@ -175,7 +175,7 @@ const CartPage = () => {
   useEffect(() => {
     const fetchReviews = async (productId: string) => {
       try {
-        const response = await axios.get(`https://zoroz-ecommerce-backend.onrender.com/api/reviews/${productId}`);
+        const response = await axios.get(`https://zoroz-backend.onrender.com/api/reviews/${productId}`);
         setReviews((prev) => ({ ...prev, [productId]: response.data }));
       } catch (error) {
         console.error("Error fetching reviews:", error);
@@ -190,7 +190,7 @@ const CartPage = () => {
     if (currentProductId) {
       try {
         const response = await axios.post(
-          `https://zoroz-ecommerce-backend.onrender.com/api/reviews/${currentProductId}`,
+          `https://zoroz-backend.onrender.com/api/reviews/${currentProductId}`,
           newReview
         );
         setReviews((prev) => ({

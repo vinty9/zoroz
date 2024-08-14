@@ -116,7 +116,7 @@
 //         }
 //       }
   
-//       const response = await axios.post("https://zoroz-ecommerce-backend.onrender.com/api/orders", formData, {
+//       const response = await axios.post("https://zoroz-backend.onrender.com/api/orders", formData, {
 //         headers: {
 //           "Content-Type": "multipart/form-data"
 //         }
@@ -297,7 +297,7 @@ const Payment = () => {
         }
       }
 
-      const response = await axios.post("https://zoroz-ecommerce-backend.onrender.com/api/orders", formData, {
+      const response = await axios.post("https://zoroz-backend.onrender.com/api/orders", formData, {
         headers: {
           "Content-Type": "multipart/form-data"
         }

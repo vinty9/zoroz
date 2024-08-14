@@ -67,7 +67,7 @@
 //   useEffect(() => {
 //     const fetchOrders = async () => {
 //       try {
-//         const response = await axios.get("https://zoroz-ecommerce-backend.onrender.com/api/orders");
+//         const response = await axios.get("https://zoroz-backend.onrender.com/api/orders");
 //         console.log("Orders:", response.data);
 //         setOrders(response.data);
 //       } catch (error) {
@@ -308,7 +308,7 @@ interface Order {
 }
 
 
-const backendUrl = "https://zoroz-ecommerce-backend.onrender.com";
+const backendUrl = "https://zoroz-backend.onrender.com";
 
 
 const reasons = [
@@ -478,7 +478,7 @@ const OrderList = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await axios.get("https://zoroz-ecommerce-backend.onrender.com/api/orders");
+        const response = await axios.get("https://zoroz-backend.onrender.com/api/orders");
         setOrders(response.data);
       } catch (error) {
         console.error("Error fetching orders:", error);

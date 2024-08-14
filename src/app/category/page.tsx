@@ -67,7 +67,7 @@ const CategoryComponent = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('https://zoroz-ecommerce-backend.onrender.com/products');
+        const response = await axios.get('https://zoroz-backend.onrender.com/products');
         console.log('Fetched products:', response.data);
 
         setProducts(response.data);
@@ -198,7 +198,7 @@ const CategoryComponent = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch('https://zoroz-ecommerce-backend.onrender.com/categories/getCategories');
+        const response = await fetch('https://zoroz-backend.onrender.com/categories/getCategories');
         const result = await response.json();
 
         if (Array.isArray(result.data)) {
@@ -218,7 +218,7 @@ const CategoryComponent = () => {
     // Fetch brands from the backend API
     const fetchBrands = async () => {
       try {
-        const response = await axios.get('https://zoroz-ecommerce-backend.onrender.com/categories/getBrands');
+        const response = await axios.get('https://zoroz-backend.onrender.com/categories/getBrands');
         console.log('brand fetched');
         if (response.data.success) {
           setBrands(response.data.data);
@@ -240,7 +240,7 @@ const CategoryComponent = () => {
 
     try {
       const encodedCategoryName = encodeURIComponent(categoryName);
-      const response = await fetch(`https://zoroz-ecommerce-backend.onrender.com/categories/getSubCategories/${encodedCategoryName}`);
+      const response = await fetch(`https://zoroz-backend.onrender.com/categories/getSubCategories/${encodedCategoryName}`);
 
       if (response.ok) {
         const result = await response.json();

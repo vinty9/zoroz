@@ -71,7 +71,7 @@
 //     useEffect(() => {
 //         const fetchAddresses = async () => {
 //             try {
-//                 const response = await axios.get('https://zoroz-ecommerce-backend.onrender.com/address');
+//                 const response = await axios.get('https://zoroz-backend.onrender.com/address');
 //                 setAddresses(response.data);
 //                 if (response.data.length > 0) {
 //                     setSelectedAddress(response.data[0]);
@@ -162,10 +162,10 @@
 //     const handleAddressFormSubmit = async (e: React.FormEvent) => {
 //         e.preventDefault();
 //         if (isEditing) {
-//             const response = await axios.put(`https://zoroz-ecommerce-backend.onrender.com/address/${newAddress._id}`, newAddress);
+//             const response = await axios.put(`https://zoroz-backend.onrender.com/address/${newAddress._id}`, newAddress);
 //             setAddresses(addresses.map(addr => addr._id === response.data._id ? response.data : addr));
 //         } else {
-//             const response = await axios.post("https://zoroz-ecommerce-backend.onrender.com/address", newAddress);
+//             const response = await axios.post("https://zoroz-backend.onrender.com/address", newAddress);
 //             setAddresses([...addresses, response.data]);
 //         }
 //         setShowAddressForm(false);
@@ -691,7 +691,7 @@ const Buynowhomepage = () => {
     useEffect(() => {
         const fetchAddresses = async () => {
             try {
-                const response = await axios.get('https://zoroz-ecommerce-backend.onrender.com/address');
+                const response = await axios.get('https://zoroz-backend.onrender.com/address');
                 setAddresses(response.data);
                 if (response.data.length > 0) {
                     setSelectedAddress(response.data[0]);
@@ -705,7 +705,7 @@ const Buynowhomepage = () => {
     }, []);
 
     useEffect(() => {
-        axios.get('https://zoroz-ecommerce-backend.onrender.com/getCoupons')
+        axios.get('https://zoroz-backend.onrender.com/getCoupons')
             .then(response => {
                 console.log("Fetched Coupons:", response.data);
 
@@ -833,10 +833,10 @@ const Buynowhomepage = () => {
     const handleAddressFormSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (isEditing) {
-            const response = await axios.put(`https://zoroz-ecommerce-backend.onrender.com/address/${newAddress._id}`, newAddress);
+            const response = await axios.put(`https://zoroz-backend.onrender.com/address/${newAddress._id}`, newAddress);
             setAddresses(addresses.map(addr => addr._id === response.data._id ? response.data : addr));
         } else {
-            const response = await axios.post("https://zoroz-ecommerce-backend.onrender.com/address", newAddress);
+            const response = await axios.post("https://zoroz-backend.onrender.com/address", newAddress);
             setAddresses([...addresses, response.data]);
         }
         setShowAddressForm(false);

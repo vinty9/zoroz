@@ -111,7 +111,7 @@ const CartProductDetailsPage = () => {
     useEffect(() => {
         const fetchAddresses = async () => {
             try {
-                const response = await axios.get("https://zoroz-ecommerce-backend.onrender.com/address");
+                const response = await axios.get("https://zoroz-backend.onrender.com/address");
                 setAddresses(response.data);
             } catch (error) {
                 console.error("Error fetching addresses:", error);
@@ -151,7 +151,7 @@ const CartProductDetailsPage = () => {
     useEffect(() => {
         if (product) {
             axios
-                .get(`https://zoroz-ecommerce-backend.onrender.com/api/reviews?productId=${product._id}`)
+                .get(`https://zoroz-backend.onrender.com/api/reviews?productId=${product._id}`)
                 .then((response) => {
                     setReviews(response.data);
                 });
@@ -171,7 +171,7 @@ const CartProductDetailsPage = () => {
         e.preventDefault();
         if (product) {
             try {
-                const response = await axios.post(`https://zoroz-ecommerce-backend.onrender.com/api/reviews`, {
+                const response = await axios.post(`https://zoroz-backend.onrender.com/api/reviews`, {
                     ...newReview,
                     productId: product._id,
                 });

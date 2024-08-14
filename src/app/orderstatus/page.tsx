@@ -67,7 +67,7 @@
 //       }
 
 //       try {
-//         const response = await axios.get(`https://zoroz-ecommerce-backend.onrender.com/api/orders/${orderId}`);
+//         const response = await axios.get(`https://zoroz-backend.onrender.com/api/orders/${orderId}`);
 //         setOrderDetails(response.data);
 //       } catch (error) {
 //         console.error("Error fetching order details:", error);
@@ -206,7 +206,7 @@ const OrderStatusContent = () => {
       }
 
       try {
-        const response = await axios.get(`https://zoroz-ecommerce-backend.onrender.com/api/orders/${orderId}`);
+        const response = await axios.get(`https://zoroz-backend.onrender.com/api/orders/${orderId}`);
         setOrderDetails(response.data);
 
         const cart = localStorage.getItem("cart");
