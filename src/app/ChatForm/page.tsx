@@ -1,3 +1,5 @@
+"use client";  // This marks the file as a Client Component
+
 import React, { useState } from 'react';
 import { FaComment } from 'react-icons/fa';
 
